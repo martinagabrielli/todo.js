@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="Todos.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <h1>Todo-List</h1>
+        <input id="text" type="text" placeholder="Todo text">
+        <input id="enter" type="button" value="Add" onclick="processInput()">
+        <ul id="container"></ul>
+    </div>
+    <script>
+        let myTodo = new TodoListFactory('container')
+        myTodo.render()
+        myTodo.addTodo({
+            completed: false,
+            content: 'I must learn JavaScript'
+        })
+
+        let processInput = () => {
+            const todoText = document.getElementById('text').value
+            myTodo.addTodo({
+            completed: false,
+            content: todoText
+        })
+        }
+    </script>
+</body>
+</html>
