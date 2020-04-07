@@ -1,0 +1,49 @@
+* {
+    font-family: sans-serif;
+    body {
+        .wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            #text {
+                height: 30px;
+                width: 200px;
+                border-radius: 5px;
+                border-style: dotted;
+                &:focus {
+                    outline: none;
+                }
+            }
+            #enter {
+                background: rgb(220, 214, 206);
+                border-radius: 5px;
+                width: 70px;
+                height: 30px;
+                margin: 30px;
+                font-size: 18px;
+                &:focus {
+                    outline: none;
+                }
+            }
+            h1 {
+            }
+            ul {
+                list-style-type: none;
+                input[type=checkbox] {
+                    transform: scale(1.5);
+                }
+                li {
+                    display: flex;
+                    margin-bottom: 1em;
+                    #content {
+                        margin: 0 1em;
+                    }
+                    #delete {
+
+                    }
+                }
+            }
+        }
+    }
+}
